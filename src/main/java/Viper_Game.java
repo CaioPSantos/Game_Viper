@@ -19,6 +19,36 @@ public class Viper_Game{
   //Vetor Nome dos Inimigos|
   static String inimigos[] = {"Uhktan Lança","Uhktan Arqueiro","Uhktan Guerreiro","Grande Uhktan","Chefe Uhktan","Mestre Uhktan","Lorde Uhktan","Boss-Tankunh"};
 
+  //Main   
+  public static void main(String[] args) {
+    nomeviper(); //Slogan
+      do{ //Laço Menu Inicial
+        menujogo();
+        opcaomenu = entrada.nextInt();
+        switch(opcaomenu){
+        case 1: //Opção: Jogar
+          quadroIntroducao();
+        break;
+        case 2: //Opção: Como jogar
+          quadroComoJogar();
+        break;
+        case 3: //Opção: Créditos
+          quadroCreditos();
+        break;
+        case 4: //Opção: Sair
+        break;
+        default:
+          System.out.println("|=================================|");  
+          System.out.println("|  ***   Opção Inválida...   ***  |");
+          System.out.println("|=================================|");
+        }//Fim Switch
+      }while(opcaomenu !=4);  //Fim Do-While , Saida do laço
+        System.out.println("    ***  Jogo Encerrado  ***  ");
+        System.out.println("|=============================|");
+        System.out.println("|  Obrigado por jogar Viper   |");
+        System.out.println("|=============================|");
+ }//Fim Main
+  
 //---------------------------FUNÇÕES|
   //Cenas História
   public static void historia (int h){
@@ -603,33 +633,4 @@ public class Viper_Game{
   }//Fim Quadro Luta
 //-------------------FIM QUADROS JOGOS----|
 
-//Main   
-  public static void main(String[] args) {
-    nomeviper(); //Slogan
-      do{ //Laço Menu Inicial
-        menujogo();
-        opcaomenu = entrada.nextInt();
-        switch(opcaomenu){
-        case 1: //Opção: Jogar
-          quadroIntroducao();
-        break;
-        case 2: //Opção: Como jogar
-          quadroComoJogar();
-        break;
-        case 3: //Opção: Créditos
-          quadroCreditos();
-        break;
-        case 4: //Opção: Sair
-        break;
-        default:
-          System.out.println("|=================================|");  
-          System.out.println("|  ***   Opção Inválida...   ***  |");
-          System.out.println("|=================================|");
-        }//Fim Switch
-      }while(opcaomenu !=4);  //Fim Do-While , Saida do laço
-        System.out.println("    ***  Jogo Encerrado  ***  ");
-        System.out.println("|=============================|");
-        System.out.println("|  Obrigado por jogar Viper   |");
-        System.out.println("|=============================|");
- }//Fim Main
 }//Fim Class
